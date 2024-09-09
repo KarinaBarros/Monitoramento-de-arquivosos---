@@ -1,0 +1,15 @@
+Levantamento de requisitos:
+Funcionais:
+Monitoramento de Arquivos: O sistema deve observar eventos de criação, modificação e exclusão de arquivos em uma pasta específica no servidor VPN.
+Registro de Logs: Cada evento deve ser registrado em uma tabela do banco de dados com informações como fonte, destino, tipo de evento e data.
+Atualização Automática: O Treeview na interface gráfica deve ser atualizado automaticamente a cada novo evento.
+Limpeza Diária de Dados: Ao iniciar o sistema, os dados da tabela de logs devem ser excluídos e a tabela recriada.
+Alerta de Modificações: Se um arquivo for modificado mais de 5 vezes nos últimos 10 minutos, o sistema deve emitir um alerta na forma de um popup.
+Suporte Multiusuário: O sistema deve ser capaz de monitorar arquivos modificados por diversos usuários na VPN.
+Filtro de Subdiretórios: O sistema deve monitorar apenas eventos de arquivos.
+Não Funcionais:
+Desempenho: O sistema deve ser capaz de processar eventos em tempo real com baixa latência.
+Escalabilidade: Suporte a múltiplos usuários modificando arquivos ao mesmo tempo.
+Confiabilidade: O sistema deve evitar falsos positivos ao registrar eventos e garantir que os alertas sejam acionados corretamente.
+Segurança: O sistema deve funcionar em uma rede VPN, garantindo o sigilo das informações.
+Manutenção: Facilidade de configuração da pasta a ser monitorada e atualização do software.
