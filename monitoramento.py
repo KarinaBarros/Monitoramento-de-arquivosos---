@@ -38,6 +38,8 @@ def fechar_popup(popup, treeview):
     popup_aberto = None
     popup.destroy()
     atualizar_treeview(treeview)  # Atualiza o Treeview ao fechar o pop-up
+    global registros
+    registros = False
 
 # Classe para manipular eventos do sistema de arquivos
 class ManipuladorDeEventos(FileSystemEventHandler):
@@ -148,7 +150,6 @@ class MonitoramentoApp(tk.Tk):
 if __name__ == "__main__":
     app = MonitoramentoApp()
     app.mainloop()
-
 
 
 
